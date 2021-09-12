@@ -28,11 +28,11 @@ function buildCharts(sample) {
     // Using d3.json to fetch the sample data for the plots
     d3.json('data/samples.json').then((data) => {
         // Build the graph and bubble chart using the sample data
-        let samples = data.samples.filter(function(d) { return d.id == sample; })
+        var samples = data.samples.filter(function(d) { return d.id == sample; })
             .sort(function compareFunction(firstNum, secondNum) { return secondNum - firstNum; })[0];
-        let otu_ids = samples.otu_ids.slice(0, 10);
-        let otu_labels = samples.otu_labels.slice(0, 10);
-        let sample_values = samples.sample_values.slice(0, 10);
+        var otu_ids = samples.otu_ids.slice(0, 10);
+        var otu_labels = samples.otu_labels.slice(0, 10);
+        var sample_values = samples.sample_values.slice(0, 10);
         // Create the data array for the bubble plot
         var bub_Data = [{
             x: otu_ids,
@@ -109,7 +109,7 @@ function init() {
     var selector = d3.select("#select");
     // Use the list of sample names to populate the select options
     d3.json('data/samples.json').then((data) => {
-        let sampleNames = data.names;
+        var sampleNames = data.names;
         sampleNames.forEach((sample) => {
             selector
                 .append("option")
