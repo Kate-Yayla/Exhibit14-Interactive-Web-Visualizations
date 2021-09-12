@@ -56,3 +56,5 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Updated the chart whenever a new sample is selected.
 
 ![Weekly Washing Frequency Gauge](Images/gauge.png)
+
+Bonus.js file is for guage modification for advanced challenge assignment. 
